@@ -53,6 +53,7 @@ jobs:
     - name: Push
       uses:  ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.token }}
         branch: master
     - name: GitCommit
       run: |                 
@@ -62,4 +63,5 @@ jobs:
     - name: GitPush
       uses:  ad-m/github-push-action@master
       with:
+        github_token: ${{ secrets.token }}
         branch: master
